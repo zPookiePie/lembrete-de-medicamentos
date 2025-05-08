@@ -1,0 +1,158 @@
+.awarenessSection {
+    padding: 3rem 2rem;
+    background: #f0f9ff;
+    border-radius: 1rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+    h2 {
+      font-size: 2.2rem;
+      color: #0066cc;
+      text-align: center;
+      margin-bottom: 2.5rem;
+
+      @media (max-width: 500px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  .infoBox {
+    background-color: #ffffff;
+    border: 1px solid #d0eaff;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+  
+    h3 {
+      font-size: 1.3rem;
+      color: #00509e;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #333;
+        text-align: left;
+      }
+    }
+  }
+  
+  .warning {
+    background: #fff3cd;
+    color: #856404;
+    padding: 1.5rem 1rem;
+    border-left: 4px solid #ffc107;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  
+  .steps {
+    margin-top: 4rem;
+  
+    h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #004080;
+      margin-bottom: 2.5rem;
+    }
+  
+    ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+  
+    li {
+      position: relative;
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      &::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 40px;
+        height: 40px;
+        background-color: #00b4d8;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+      }
+  
+      img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.05rem;
+        color: #333;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 480px) {
+    .steps ol li {
+      padding: 1.5rem 1rem;
+    }
+  
+    .steps ol li img {
+      max-width: 80px;
+    }
+  
+    .steps ol li::before {
+      top: -10px;
+      left: -10px;
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .awarenessSection {
+      padding: 2rem 1rem;
+    }
+  
+    .infoBox {
+      padding: 1.2rem 1rem;
+    }
+  }
+  
