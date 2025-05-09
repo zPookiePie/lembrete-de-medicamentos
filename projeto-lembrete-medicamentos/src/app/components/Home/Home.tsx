@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react'
 import ReminderForm from '../ReminderForm/ReminderForm'
 import ReminderList from '../ReminderList/ReminderList'
+import AwarenessSection from '../AwarenessSection/AwarenessSection'
+import RegisterServiceWorker from '../RegisterServiceWorker/RegisterServiceWorker'
 
 import styles from './Home.module.scss'
-import AwarenessSection from '../AwarenessSection/AwarenessSection'
 
 export interface Reminder {
   id: string
@@ -89,6 +90,7 @@ export default function HomePage() {
 
   return (
     <div className={styles.container}>
+      <RegisterServiceWorker />
       <h1>Crie seu Lembrete de Medicamentos</h1>
       <ReminderForm onAdd={addReminder} />
       <ReminderList reminders={reminders} onRemove={removeReminder} />
