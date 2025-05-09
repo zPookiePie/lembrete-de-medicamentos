@@ -88,6 +88,25 @@ export default function HomePage() {
     saveReminders(updated)
   }
 
+  function testNotification() {
+    if (!('Notification' in window)) {
+      alert('Este navegador não suporta notificações.')
+      return
+    }
+  
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        new Notification('Notificação de teste', {
+          body: 'Funcionando! 🎉',
+          icon: '/notification-icon.png',
+        })
+      } else {
+        alert('Permissão negada para notificações.')
+      }
+    })
+  }
+  
+
   return (
     <div className={styles.container}>
       <RegisterServiceWorker />
@@ -96,6 +115,7 @@ export default function HomePage() {
       <ReminderList reminders={reminders} onRemove={removeReminder} />
       <AwarenessSection />
       <p>Desenvolvido com ❤️ por Ágata</p>
+      <button onClick={testNotification}>Testar Notificação</button>
     </div>
   )
 }
