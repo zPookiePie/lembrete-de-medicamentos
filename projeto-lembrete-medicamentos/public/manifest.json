@@ -1,6 +1,6 @@
 {
-    "name": "Lembrete de Medicamentos",
-    "short_name": "Lembrete",
+    "name": "Manuseio Correto de Medicamentos",
+    "short_name": "Manuseio: Medicamentos",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
