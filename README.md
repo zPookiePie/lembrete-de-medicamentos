@@ -68,3 +68,6 @@ npm install
 npm run dev
 
 # Acesse em: http://localhost:3000
+```
+---
+![Captura de tela 2025-05-13 114904](https://github.com/user-attachments/assets/99d8242d-eca6-4138-9e30-3cbfa4a93bea)
